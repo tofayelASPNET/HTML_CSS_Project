@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_19</title>
+    <link rel="stylesheet" href="style19.css" />
+    <link rel="stylesheet" href="project.css">
+    <style>
+      .parent1 {
+        width: 220px;
+        height: 220px;
+        border: 1px dashed rgba(0, 0, 0, 0.783);
+      }
+      .relative1 {
+        position: relative;
+        left: 35px;
+        top: 35px;
+        border: 1px solid rgb(199, 14, 14);
+      }
+      .normal1 {
+        border: 1px dashed rgba(20, 20, 230, 0.801);
+      }
+      .positioned {
+        position: relative;
+        border: 1px solid rgba(220, 15, 15, 0.854);
+        width: 220px;
+        height: 220px;
+      }
+      .non-positioned {
+        border: 1px dashed rgba(0, 0, 0, 0.785);
+        width: 160px;
+        height: 160px;
+      }
+      .absolute {
+        position: absolute;
+        right: 35px;
+        top: 35px;
+        border: 1px solid rgba(255, 0, 0, 0.783);
+        background-color: rgba(255, 255, 255, 0.744);
+      }
+      .big {
+        height: 960px;
+        border: 1px solid rgba(230, 27, 27, 0.717);
+      }
+      .fixed {
+        position: fixed;
+        right: 25px;
+        top: 30px;
+        width: 100px;
+        border: 1px solid rgba(255, 0, 0, 0.735);
+      }
+      .parent4 {
+        width: 220px;
+        height: 220px;
+        overflow: auto;
+      }
+      .sticky4 {
+        position: sticky;
+        top: 0;
+        border: 1px solid rgba(25, 0, 255, 0.575);
+        background-color: rgba(255, 255, 255, 0.833);
+      }
+      .container5 {
+        border: 1px solid rgba(31, 13, 224, 0.87);
+        width: 350px;
+        height: 150px;
+      }
+      .child5 {
+        float: right;
+        border: 1px solid rgba(158, 207, 10, 0.813);
+      }
+      .container6 {
+        border: 1px solid rgba(13, 188, 28, 0.769);
+        width: 320px;
+        height: 120px;
+      }
+      .float6 {
+        float: left;
+        border: 1px solid rgba(255, 0, 0, 0.68);
+      }
+      .no-float6 {
+        border: 1px solid rgba(161, 191, 25, 0.801);
+      }
+      .flex-container9 {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 320px;
+        height: 170px;
+        border: 1px solid rgba(0, 0, 0, 0.63);
+        gap: 20px;
+      }
+      .flex-item {
+        border: 1px solid rgba(0, 0, 255, 0.845);
+      }
+      .flex-container10 {
+        display: flex;
+        width: 320px;
+        height: 170px;
+        border: 1px solid rgba(23, 171, 33, 0.731);
+        gap: 15px;
+      }
+      .flex-item10 {
+        border: 1px solid rgba(220, 20, 20, 0.833);
+        flex-basis: 120px;
+      }
+      .flex-container11 {
+        display: flex;
+        width: 320px;
+        height: 170px;
+        border: 1px solid rgba(27, 184, 27, 0.909);
+        gap: 15px;
+      }
+      .flex-item11 {
+        border: 1px solid rgba(255, 0, 0, 0.847);
+      }
+      .item1 {
+        order: 2;
+      }
+      .item2 {
+        order: 1;
+      }
+      .flex-container13 {
+        display: flex;
+        width: 420px;
+        height: 170px;
+        border: 1px solid rgba(13, 209, 49, 0.826);
+        gap: 15px;
+      }
+      .flex-item13 {
+        border: 1px solid rgba(255, 0, 0, 0.765);
+        flex-basis: 100px;
+      }
+      .item2 {
+        flex-shrink: 2;
+      }
+      .flex-container14 {
+        display: flex;
+        align-items: center;
+        width: 320px;
+        height: 170px;
+        border: 1px solid rgba(35, 18, 144, 0.721);
+        gap: 15px;
+      }
+      .flex-item14 {
+        border: 1px solid rgba(0, 255, 38, 0.858);
+      }
+      .item1 {
+        align-self: flex-start;
+      }
+      .item2 {
+        align-self: flex-end;
+      }
+      .item4 {
+        align-self: baseline;
+      }
+      .item5 {
+        align-self: stretch;
+      }
+      .flex-container15 {
+        display: flex;
+        width: 420px;
+        height: 170px;
+        border: 1px solid rgba(189, 9, 9, 0.808);
+        gap: 15px;
+      }
+      .flex-item15 {
+        border: 1px solid rgba(0, 255, 26, 0.826);
+      }
+      .item1 {
+        flex: 2;
+      }
+      .item2 {
+        flex: 1;
+      }
+      .item3 {
+        flex: 1;
+      }
+      .flex-container16 {
+        display: flex;
+        width: 99%;
+        border: 1px solid rgba(212, 32, 32, 0.863);
+        gap: 15px;
+      }
+      .flex-item16 {
+        border: 1px solid rgba(0, 255, 30, 0.769);
+      }
+      .lnk-home {
+        margin-right: auto;
+      }
+      .grid-container24 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1px solid rgba(9, 210, 46, 0.84);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        align-items: start;
+      }
+      .grid-item24 {
+        border: 2.5px solid rgba(255, 0, 0, 0.879);
+      }
+      .grid-container25 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1px solid rgba(197, 213, 20, 0.849);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        justify-content: start;
+      }
+      .grid-item25 {
+        border: 1.5px solid rgba(0, 255, 8, 0.856);
+      }
+      .grid-container26 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1.5px solid rgba(96, 215, 11, 0.854);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        align-content: start;
+      }
+      .grid-item26 {
+        border: 1.5px solid rgba(221, 255, 0, 0.82);
+      }
+      .grid-container27 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+
+        border: 1px solid rgba(13, 185, 64, 0.571);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+      }
+      .grid-item27 {
+        border: 1.5px solid rgba(43, 0, 255, 0.801);
+      }
+      .item3 {
+        grid-column-start: 2;
+      }
+      .grid-container30 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1.1px solid rgba(173, 202, 11, 0.813);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+      }
+      .grid-item30 {
+        border: 1.1px solid rgba(255, 0, 0, 0.781);
+      }
+
+      .item9 {
+        grid-column-start: 2;
+        /* grid-row: 1 / 3; */
+        grid-row: 1 / span 2;
+      }
+      .grid-container31 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1.1px solid rgba(228, 22, 22, 0.854);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+      }
+      .grid-item31 {
+        border: 1.1px solid rgba(11, 187, 222, 0.868);
+      }
+      .item6 {
+        grid-area: 1 / 3 / 5 / 4;
+      }
+      .grid-container32 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1.5px solid rgba(125, 153, 22, 0.735);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        justify-items: start;
+      }
+      .grid-item32 {
+        border: 1.5px solid rgba(102, 41, 132, 0.747);
+      }
+      .item5 {
+        justify-self: end;
+      }
+      .grid-container33 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1.5px solid rgba(92, 25, 25, 0.863);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        align-items: start;
+      }
+      .grid-item33 {
+        border: 1.5px solid rgba(255, 0, 251, 0.779);
+      }
+      .item5 {
+        align-self: end;
+      }
+      .grid-container34 {
+        display: grid;
+        width: 320px;
+        height: 170px;
+        border: 1.5px solid rgba(11, 120, 60, 0.703);
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        grid-template-areas:
+          "header header header header header header"
+          "menu main main main sidebar sidebar"
+          "footer footer footer footer footer footer";
+      }
+      .grid-item34 {
+        border: 1.5px solid rgba(0, 255, 242, 0.836);
+      }
+      .item1 {
+        grid-area: header;
+      }
+      .item2 {
+        grid-area: menu;
+      }
+      .item3 {
+        grid-area: main;
+      }
+      .item4 {
+        grid-area: sidebar;
+      }
+      .item5 {
+        grid-area: footer;
+      }
+      .container35 {
+        border: 1.5px solid rgba(184, 203, 12, 0.619);
+        width: 320px;
+        height: 80px;
+      }
+      .child35 {
+        border: 1.5px solid rgba(139, 13, 161, 0.733);
+        width: 160px;
+        margin: auto;
+      }
+      .container36 {
+        border: 1.5px solid rgba(44, 188, 22, 0.783);
+        width: 320px;
+      }
+      .child36 {
+        border: 1.5px solid rgba(255, 0, 0, 0.689);
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+      .container37 {
+        position: relative;
+        border: 1.1px solid rgba(30, 181, 50, 0.913);
+        width: 320px;
+        height: 170px;
+      }
+      .child37 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1.1px solid rgba(255, 0, 212, 0.831);
+      }
+
+      .another-child37 {
+        border: 1.1px solid rgba(0, 0, 255, 0.84);
+      }
+      .flex-container38 {
+        display: flex;
+        width: 330px;
+        height: 170px;
+        border: 1.1px solid rgba(72, 26, 199, 0.822);
+      }
+      .flex-item38 {
+        border: 1.1px solid rgba(255, 0, 0, 0.721);
+        width: 90px;
+        height: 90px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_19</h1></p>
+    <h1 style="background-color: yellowgreen">Ex01(relative)</h1>
+    <div class="parent1">
+      <div class="normal1">My name is Tofayel.</div>
+      <div class="relative1">I am good!</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex02(absolute)</h1>
+    <div class="positioned">
+      <div class="non-positioned">
+        <div class="absolute">I am good!</div>
+      </div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex03(fixed)</h1>
+    <div>Element</div>
+    <div class="fixed">I am Fixed!</div>
+    <div class="big">Big element.</div>
+
+    <h1 style="background-color: yellowgreen">Ex04(sticky)</h1>
+    <div class="parent4">
+      <p>
+        Try to scroll inside this frame to understand how sticky positioning
+        works.
+      </p>
+      <div class="sticky4">I am sticky!</div>
+      <p>
+        In this example, the sticky element sticks to the top of the page when
+        it reaches the position "top: 0".
+      </p>
+      <p>Scroll back up to remove the stickiness.</p>
+      <p>
+        Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+        concludaturque et eum, altera fabulas ut quo.
+      </p>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex05(float)</h1>
+    <div class="container5">
+      <div class="child5">I'm the 1st boy</div>
+      <div class="child5">I'm the 2nd boy</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex06(clear)</h1>
+    <div class="container6">
+      <div class="float6">I'm the 1st boy</div>
+      <div class="float6">I'm the 2nd boy</div>
+      <div class="no-float6">I'm the 3rd boy</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex07(CSS Z-index)</h1>
+    <div class="container7">
+      <div class="absolute child z-index-minus-two">z-index: -3</div>
+      <div class="absolute child z-index-minus-one">z-index: -1</div>
+      <div class="absolute child z-index-zero">z-index: 0</div>
+      <div class="absolute child z-index-one">z-index: 2</div>
+      <div class="child z-index-two">z-index: 2; but I'm not positioned</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex08(CSS Flexbox)</h1>
+    <div class="flex-container8">
+      <div class="flex-item item1">flex num 1</div>
+      <div class="flex-item item2">flex num 2</div>
+      <div class="flex-item item3">flex num 3</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex09(Flex Container)</h1>
+    <div class="flex-container9">
+      <div class="flex-item item1">flex item 1</div>
+      <div class="flex-item item2">flex item 2</div>
+      <div class="flex-item item3">flex item 3</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex10(Flex Items)</h1>
+    <div class="flex-container10">
+      <div class="flex-item10 item1">flex num 1</div>
+      <div class="flex-item10 item2">flex num 2</div>
+      <div class="flex-item10 item3">flex num 3</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex11(order)</h1>
+    <div class="flex-container11">
+      <div class="flex-item11 item1">flex num 1</div>
+      <div class="flex-item11 item2">flex num 2</div>
+      <div class="flex-item11 item3">flex num 3</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex12(flex-grow)</h1>
+    <div class="flex-container12">
+      <div class="flex-item12 item1">flex num 1</div>
+      <div class="flex-item12 item2">flex num 2</div>
+      <div class="flex-item12 item3">flex num 3</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex13(flex-shrink)</h1>
+    <div class="flex-containe13">
+      <div class="flex-item13 item1">Num 1</div>
+      <div class="flex-item13 item2">Num 2</div>
+      <div class="flex-item13 item3">Num 3</div>
+      <div class="flex-item13 item4">Num 4</div>
+      <div class="flex-item13 item5">Num 5</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex14(align-self)</h1>
+    <div class="flex-container14">
+      <div class="flex-item14 item1">flex-start</div>
+      <div class="flex-item14 item2">flex-end</div>
+      <div class="flex-item14 item3">center</div>
+      <div class="flex-item14 item4">baseline</div>
+      <div class="flex-item14 item5">stretch</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex15(flex)</h1>
+    <div class="flex-container15">
+      <div class="flex-item15 item1">flex num 1</div>
+      <div class="flex-item15 item2">flex num 2</div>
+      <div class="flex-item15 item3">flex num 3</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex16(Auto Margin for Flex Items)
+    </h1>
+    <div class="flex-container16">
+      <div class="flex-item16 lnk-home">HOME</div>
+      <div class="flex-item16">Log in</div>
+      <div class="flex-item16">Sign up</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex17(CSS Grid)</h1>
+    <div class="grid-container17">
+      <div class="grid-item17 item1">Item 1</div>
+      <div class="grid-item17 item2">Item 2</div>
+      <div class="grid-item17 item3">Item 3</div>
+      <div class="grid-item17 item4">Item 4</div>
+      <div class="grid-item17 item5">Item 5</div>
+      <div class="grid-item17 item6">Item 6</div>
+      <div class="grid-item17 item7">Item 7</div>
+      <div class="grid-item17 item8">Item 8</div>
+      <div class="grid-item17 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex18(Grid Container)</h1>
+    <div class="grid-container18">
+      <div class="grid-item18 item1">Item 1</div>
+      <div class="grid-item17 item2">Item 2</div>
+      <div class="grid-item18 item3">Item 3</div>
+      <div class="grid-item18 item4">Item 4</div>
+      <div class="grid-item18 item5">Item 5</div>
+      <div class="grid-item18 item6">Item 6</div>
+      <div class="grid-item18 item7">Item 7</div>
+      <div class="grid-item18 item8">Item 8</div>
+      <div class="grid-item18 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex19(grid-template-rows)</h1>
+    <div class="grid-container19">
+      <div class="grid-item19 item1">Item 1</div>
+      <div class="grid-item19 item2">Item 2</div>
+      <div class="grid-item19 item3">Item 3</div>
+      <div class="grid-item19 item4">Item 4</div>
+      <div class="grid-item19 item5">Item 5</div>
+      <div class="grid-item19 item6">Item 6</div>
+      <div class="grid-item19 item7">Item 7</div>
+      <div class="grid-item19 item8">Item 8</div>
+      <div class="grid-item19 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex20(column-gap)</h1>
+    <div class="grid-container20">
+      <div class="grid-item20 item1">Item 1</div>
+      <div class="grid-item20 item2">Item 2</div>
+      <div class="grid-item20 item3">Item 3</div>
+      <div class="grid-item20 item4">Item 4</div>
+      <div class="grid-item20 item5">Item 5</div>
+      <div class="grid-item20 item6">Item 6</div>
+      <div class="grid-item20 item7">Item 7</div>
+      <div class="grid-item20 item8">Item 8</div>
+      <div class="grid-item20 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex21(row-gap)</h1>
+    <div class="grid-container21">
+      <div class="grid-item21 item1">Item 1</div>
+      <div class="grid-item21 item2">Item 2</div>
+      <div class="grid-item21 item3">Item 3</div>
+      <div class="grid-item21 item4">Item 4</div>
+      <div class="grid-item21 item5">Item 5</div>
+      <div class="grid-item21 item6">Item 6</div>
+      <div class="grid-item21 item7">Item 7</div>
+      <div class="grid-item21 item8">Item 8</div>
+      <div class="grid-item21 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex22(gap)</h1>
+    <div class="grid-container22">
+      <div class="grid-item22 item1">Item 1</div>
+      <div class="grid-item22 item2">Item 2</div>
+      <div class="grid-item22 item3">Item 3</div>
+      <div class="grid-item22 item4">Item 4</div>
+      <div class="grid-item22 item5">Item 5</div>
+      <div class="grid-item22 item6">Item 6</div>
+      <div class="grid-item22 item7">Item 7</div>
+      <div class="grid-item22 item8">Item 8</div>
+      <div class="grid-item22 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex23(justify-items)</h1>
+    <div class="grid-container23">
+      <div class="grid-item23 item1">Item 1</div>
+      <div class="grid-item23 item2">Item 2</div>
+      <div class="grid-item23 item3">Item 3</div>
+      <div class="grid-item23 item4">Item 4</div>
+      <div class="grid-item23 item5">Item 5</div>
+      <div class="grid-item23 item6">Item 6</div>
+      <div class="grid-item23 item7">Item 7</div>
+      <div class="grid-item23 item8">Item 8</div>
+      <div class="grid-item23 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex24(align-items)</h1>
+    <div class="grid-container24">
+      <div class="grid-item24 item1">Item 1</div>
+      <div class="grid-item24 item2">Item 2</div>
+      <div class="grid-item24 item3">Item 3</div>
+      <div class="grid-item24 item4">Item 4</div>
+      <div class="grid-item24 item5">Item 5</div>
+      <div class="grid-item24 item6">Item 6</div>
+      <div class="grid-item24 item7">Item 7</div>
+      <div class="grid-item24 item8">Item 8</div>
+      <div class="grid-item24 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex25(justify-content)</h1>
+    <div class="grid-container25">
+      <div class="grid-item25 item1">Item 1</div>
+      <div class="grid-item25 item2">Item 2</div>
+      <div class="grid-item25 item3">Item 3</div>
+      <div class="grid-item25 item4">Item 4</div>
+      <div class="grid-item25 item5">Item 5</div>
+      <div class="grid-item25 item6">Item 6</div>
+      <div class="grid-item25 item7">Item 7</div>
+      <div class="grid-item25 item8">Item 8</div>
+      <div class="grid-item25 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex26(align-content)</h1>
+    <div class="grid-container26">
+      <div class="grid-item26 item1">Item 1</div>
+      <div class="grid-item26 item2">Item 2</div>
+      <div class="grid-item26 item3">Item 3</div>
+      <div class="grid-item26 item4">Item 4</div>
+      <div class="grid-item26 item5">Item 5</div>
+      <div class="grid-item26 item6">Item 6</div>
+      <div class="grid-item26 item7">Item 7</div>
+      <div class="grid-item26 item8">Item 8</div>
+      <div class="grid-item26 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex27(Grid Items)</h1>
+    <div class="grid-container27">
+      <div class="grid-item27 item1">Item 1</div>
+      <div class="grid-item27 item2">Item 2</div>
+      <div class="grid-item27 item3">Item 3</div>
+      <div class="grid-item27 item4">Item 4</div>
+      <div class="grid-item27 item5">Item 5</div>
+      <div class="grid-item27 item6">Item 6</div>
+      <div class="grid-item27 item7">Item 7</div>
+      <div class="grid-item27 item8">Item 8</div>
+      <div class="grid-item27 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex28(grid-column-end)</h1>
+    <div class="grid-container28">
+      <div class="grid-item28 item1">Item 1</div>
+      <div class="grid-item28 item2">Item 2</div>
+      <div class="grid-item28 item3">Item 3</div>
+      <div class="grid-item28 item4">Item 4</div>
+      <div class="grid-item28 item5">Item 5</div>
+      <div class="grid-item28 item6">Item 6</div>
+      <div class="grid-item28 item7">Item 7</div>
+      <div class="grid-item28 item8">Item 8</div>
+      <div class="grid-item28 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex29(grid-row-start)</h1>
+    <div class="grid-container29">
+      <div class="grid-item29 item1">Item 1</div>
+      <div class="grid-item29 item2">Item 2</div>
+      <div class="grid-item29 item3">Item 3</div>
+      <div class="grid-item29 item4">Item 4</div>
+      <div class="grid-item29 item5">Item 5</div>
+      <div class="grid-item29 item6">Item 6</div>
+      <div class="grid-item29 item7">Item 7</div>
+      <div class="grid-item29 item8">Item 8</div>
+      <div class="grid-item29 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex30(grid-row-end)</h1>
+    <div class="grid-container30">
+      <div class="grid-item30 item1">Item 1</div>
+      <div class="grid-item30 item2">Item 2</div>
+      <div class="grid-item30 item3">Item 3</div>
+      <div class="grid-item30 item4">Item 4</div>
+      <div class="grid-item30 item5">Item 5</div>
+      <div class="grid-item30 item6">Item 6</div>
+      <div class="grid-item30 item7">Item 7</div>
+      <div class="grid-item30 item8">Item 8</div>
+      <div class="grid-item30 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex31(grid-area)</h1>
+    <div class="grid-container31">
+      <div class="grid-item31 item1">Item 1</div>
+      <div class="grid-item31 item2">Item 2</div>
+      <div class="grid-item31 item3">Item 3</div>
+      <div class="grid-item31 item4">Item 4</div>
+      <div class="grid-item31 item5">Item 5</div>
+      <div class="grid-item31 item6">Item 6</div>
+      <div class="grid-item31 item7">Item 7</div>
+      <div class="grid-item31 item8">Item 8</div>
+      <div class="grid-item31 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex32(justify-self)</h1>
+    <div class="grid-container32">
+      <div class="grid-item32 item1">Item 1</div>
+      <div class="grid-item32 item2">Item 2</div>
+      <div class="grid-item32 item3">Item 3</div>
+      <div class="grid-item32 item4">Item 4</div>
+      <div class="grid-item32 item5">Item 5</div>
+      <div class="grid-item32 item6">Item 6</div>
+      <div class="grid-item32 item7">Item 7</div>
+      <div class="grid-item32 item8">Item 8</div>
+      <div class="grid-item32 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex33(align-self)</h1>
+    <div class="grid-container33">
+      <div class="grid-item33 item1">Item 1</div>
+      <div class="grid-item33 item2">Item 2</div>
+      <div class="grid-item33 item3">Item 3</div>
+      <div class="grid-item33 item4">Item 4</div>
+      <div class="grid-item33 item5">Item 5</div>
+      <div class="grid-item33 item6">Item 6</div>
+      <div class="grid-item33 item7">Item 7</div>
+      <div class="grid-item33 item8">Item 8</div>
+      <div class="grid-item33 item9">Item 9</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex34(grid-template-areas)</h1>
+    <div class="grid-container34">
+      <div class="grid-item34 item1">Header</div>
+      <div class="grid-item34 item2">Menu</div>
+      <div class="grid-item34 item3">Main</div>
+      <div class="grid-item34 item4">Sidebar</div>
+      <div class="grid-item34 item5">Footer</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex35(Horizontal Alignment)</h1>
+    <div class="container35">
+        <div class="child35">I'm the parant element</div>
+      </div
+
+    <h1 style="background-color: yellowgreen">EX36(Vertical alignment)</h1>
+    <div class="container36">
+        <div class="child36">I'm the parant element</div>
+      </div>
+
+    <h1 style="background-color: yellowgreen">Ex37(Perfect Centering)</h1>
+    <div class="container37">
+        <div class="child37">I'm a parant element</div>
+        <div class="another-child37">I'm another parant element</div>
+      </div>
+
+    <h1 style="background-color: yellowgreen">Ex38(Centering Using The flex Property)</h1>
+    <div class="flex-container38">
+        <div class="flex-item38">Perfect center!</div>
+      </div>
+      <div id="backDiv">
+        <a href="home.html">Back to home</a>
+      </div>
+  </body>
+</html>

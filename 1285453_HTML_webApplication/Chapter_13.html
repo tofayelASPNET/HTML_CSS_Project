@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_13</title>
+    <link rel="stylesheet" href="style13.css" />
+    <link rel="stylesheet" href="project.css">
+    <style>
+      h1 {
+        color: rgba(255, 166, 0, 0.546);
+      }
+
+      /* Universal Selector */
+      * {
+        color: rgba(149, 0, 255, 0.368);
+      }
+      #heading-one {
+        color: rgba(90, 128, 0, 0.514);
+      }
+      #line-one {
+        color: rgba(0, 128, 96, 0.71) !important;
+      }
+      .parent {
+  color: rgba(0, 255, 21, 0.683);
+ }
+ 
+.line {
+  color: rgba(128, 0, 96, 0.447);
+ }
+ 
+.first-line {
+  color: inherit;
+ }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_13</h1></p>
+    <h1 style="background-color: yellowgreen">
+      Ex01(The Last Declaration Will Win)
+    </h1>
+    <h1>My first line</h1>
+    <p>My first latter.</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex02(The More Specific Declaration Will)
+    </h1>
+    <h1 id="line-one" class="line first">My First Line</h1>
+    <p>My first paragraph.</p>
+    <h1 id="line-two" class="line">My Second Line</h1>
+    <p>My second paragraph.</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex03(Inline Style Is Preferred to both Internal and External Styles)
+    </h1>
+    <h1 id="heading-one" style="color: rgba(0, 255, 191, 0.422)">
+      My First Line
+    </h1>
+    <p>My first latter.</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex04( Declaration Is the Strongest Rule)
+    </h1>
+    <h1 id="line-one" style="color: rgba(255, 0, 187, 0.4)">My First Line</h1>
+    <p>My first paragraph.</p>
+
+    <h1 style="background-color: yellowgreen">Ex05(Inheritance)</h1>
+    <article class="parent">
+        <h1>Heading</h2>
+        <p class="line first-line">First line.</p>
+        <p class="line second-line">Second line.</p>
+      </article>
+      <div id="backDiv">
+        <a href="home.html">Back to home</a>
+      </div>
+  </body>
+</html>

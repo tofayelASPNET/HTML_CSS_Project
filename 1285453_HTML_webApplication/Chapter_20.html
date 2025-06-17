@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_18</title>
+    <link rel="stylesheet" href="style20.css" />
+    <link rel="stylesheet" href="project.css">
+    <style>
+      #div2 {
+        width: 90px;
+        height: 90px;
+        color: rgba(255, 255, 255, 0.806);
+        background: rgba(255, 0, 0, 0.735);
+        transition: width 2s;
+      }
+      #div2:hover {
+        width: 350px;
+      }
+      #div3 {
+        width: 90px;
+        height: 90px;
+        color: rgba(255, 255, 255, 0.783);
+        background: rgba(255, 0, 0, 0.895);
+        transition: width 2s, height 4s;
+        transition-delay: 3s;
+      }
+      #div3:hover {
+        width: 350px;
+        height: 350px;
+      }
+      #div4 {
+        width: 90px;
+        height: 90px;
+        color: rgba(195, 222, 21, 0.824);
+        background: rgba(255, 0, 212, 0.836);
+        transition: width 3s, height 5s;
+        transition-timing-function: ease-out;
+      }
+
+      #div4:hover {
+        width: 350px;
+        height: 350px;
+      }
+      #div5 {
+        transition: width 3s linear 2s;
+      }
+      @keyframes my-animation {
+        from {
+          background-color: rgba(0, 255, 4, 0.881);
+        }
+        to {
+          background-color: rgba(255, 255, 0, 0.452);
+        }
+      }
+      #div7 {
+        width: 120px;
+        height: 120px;
+        background-color: rgba(214, 93, 17, 0.881);
+        animation-name: my-animation;
+        animation-duration: 5s;
+      }
+      @keyframes animation {
+        0% {
+          background-color: rgba(165, 79, 79, 0.822);
+        }
+        25% {
+          background-color: rgba(23, 185, 218, 0.886);
+        }
+        50% {
+          background-color: rgba(218, 17, 111, 0.861);
+        }
+        100% {
+          background-color: rgba(3, 42, 3, 0.922);
+        }
+      }
+      #div8 {
+        width: 90px;
+        height: 90px;
+        background-color: rgba(0, 255, 255, 0.804);
+        animation-name: animation;
+        animation-duration: 5s;
+      }
+      @keyframes my-animation {
+        0% {
+          background-color: rgba(255, 0, 0, 0.881);
+        }
+        25% {
+          background-color: rgba(0, 255, 81, 0.717);
+        }
+        50% {
+          background-color: rgba(206, 13, 16, 0.094);
+        }
+        100% {
+          background-color: rgba(182, 207, 78, 0.872);
+        }
+      }
+      #div9 {
+        width: 190px;
+        height: 190px;
+        background-color: rgba(171, 199, 11, 0.1);
+        animation-name: my-animation;
+        animation-duration: 5s;
+        animation-delay: 3s;
+      }
+      @keyframes my-animation {
+        0% {
+          background-color: rgba(217, 255, 0, 0.781);
+        }
+        25% {
+          background-color: rgba(255, 0, 8, 0.84);
+        }
+        50% {
+          background-color: rgba(0, 0, 255, 0.788);
+        }
+        100% {
+          background-color: rgba(128, 0, 109, 0.808);
+        }
+      }
+      #div10 {
+        width: 190px;
+        height: 190px;
+        background-color: rgba(0, 255, 255, 0.717);
+        animation-name: my-animation;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+      }
+      @keyframes my-animation {
+        from {
+          left: 0;
+        }
+        to {
+          left: 400px;
+        }
+      }
+      #div11 {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        background-color: rgba(255, 0, 81, 0.537);
+        animation-name: my-animation;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+        animation-direction: reverse;
+      }
+      @keyframes my-animation {
+        from {
+          left: 0;
+        }
+        to {
+          left: 400px;
+        }
+      }
+      #div12 {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        background-color: rgba(55, 0, 255, 0.747);
+        animation-name: my-animation;
+        animation-duration: 5s;
+        animation-timing-function: ease-out;
+      }
+      #div13 {
+        position: relative;
+        width: 190px;
+        height: 190px;
+        background-color: rgba(0, 255, 4, 0.854);
+        animation-name: my-animation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_20</h1></p>
+    <h1 style="background-color: yellowgreen">Ex01(CSS Transitions)</h1>
+    <div id="div1">This element to see the effect on hover the mouse!</div>
+
+    <h1 style="background-color: yellowgreen">Ex02(Basic Transitions)</h1>
+    <div id="div2">This element to see the effect on hover the mouse!</div>
+
+    <h1 style="background-color: yellowgreen">Ex03(Transition Delay)</h1>
+    <div id="div3">This element to see the effect on hover the mouse!</div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex04(Transition Timing Function)
+    </h1>
+    <div id="div4">This element to see the effect on hover the mouse!</div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex05(Shorthand Transition Property)
+    </h1>
+    <div id="div5">This element to see the effect on hover the mouse!</div>
+
+    <h1 style="background-color: yellowgreen">Ex06(CSS Animations)</h1>
+    <div id="div6"></div>
+
+    <h1 style="background-color: yellowgreen">Ex07(Two-step Keyframes)</h1>
+    <div id="div7"></div>
+
+    <h1 style="background-color: yellowgreen">Ex08(Multiple Keyframes)</h1>
+    <div id="div8"></div>
+
+    <h1 style="background-color: yellowgreen">Ex09(Animation Delay)</h1>
+    <div id="div9"></div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex10(Animation Iteration Count)
+    </h1>
+    <div id="div10"></div>
+
+    <h1 style="background-color: yellowgreen">Ex11(Animation Direction)</h1>
+    <div id="div11"></div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex12(Animation Timing Function)
+    </h1>
+    <div id="div11"></div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex13(Shorthand Animation Property)
+    </h1>
+    <div id="div11"></div>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>

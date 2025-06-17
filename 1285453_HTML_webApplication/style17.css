@@ -1,0 +1,43 @@
+#p1 {
+  background-color: yellow;
+}
+#p10 {
+  background-color: yellow;
+}
+.sprite {
+  background-image: url("sprites.jpg");
+  height: 60px;
+  width: 60px;
+  margin: 6px;
+  display: inline-block;
+}
+.testing {
+  background-position: -9px -9px;
+}
+.number-1 {
+  background-position: 0 0;
+}
+.number-2 {
+  background-position: -49px 0;
+}
+.number-3 {
+  background-position: -99px 0;
+}
+.number-4 {
+  background-position: 0 -49px;
+}
+.number-5 {
+  background-position: -49px -49px;
+}
+.number-6 {
+  background-position: -99px -49px;
+}
+.number-7 {
+  background-position: 0 -99px;
+}
+.number-8 {
+  background-position: -49px -99px;
+}
+.number-9 {
+  background-position: -99px -99px;
+}

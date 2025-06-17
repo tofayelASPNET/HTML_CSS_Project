@@ -1,0 +1,24 @@
+#div1 {
+  width: 90px;
+  height: 90px;
+  color: rgba(36, 213, 20, 0.822);
+  background: rgba(212, 167, 167, 0.774);
+  transition: width 3s;
+}
+
+#div1:hover {
+  width: 350px;
+}
+@keyframes my-animation {
+  from {
+    background-color: rgba(217, 255, 0, 0.847);
+  }
+  to {
+    background-color: rgba(0, 255, 38, 0.767);
+  }
+}
+#div6 {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(128, 0, 21, 0.842);
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My new Website</title>
+  <link rel="stylesheet" href="style14.css">
+  <link rel="stylesheet" href="project.css">
+  <style>
+    #parent1 {
+      border: 1px solid rgba(212, 9, 9, 0.578);
+    }
+    #child1 {
+      border: 1px solid rgba(0, 60, 255, 0.753);
+      margin-top: 60px;
+      margin-right: 40px;
+      margin-bottom: 60px;
+      margin-left: 40px;
+    }
+    #parent2 {
+        border: 1px solid rgba(40, 215, 37, 0.518);
+        height: 90px;
+      }
+      #child2 {
+        border: 1px solid rgba(255, 0, 212, 0.484);
+        width: 195px;
+        margin: auto;
+      }
+      #parent3 {
+        border: 1px solid rgba(203, 121, 26, 0.678);
+      }
+      #child-one3 {
+        border: 1px solid rgba(255, 0, 0, 0.822);
+        margin: 35px;
+      }
+      #child-two3 {
+        border: 1px solid rgba(255, 0, 208, 0.815);
+        margin: 65px;
+      }
+      p {
+        outline: 5px dotted rgba(60, 255, 0, 0.87);
+        border: 1px solid rgba(234, 111, 17, 0.872);
+      }
+      p {
+        border: 16px groove rgba(255, 0, 208, 0.801);
+      }
+      p[id] {
+        padding: 15px;
+        width: 99px;
+        height: 45px;
+        background: rgba(0, 85, 128, 0.822);
+      }
+      #p1 {
+        border-radius: 5px;
+      }
+      #p2 {
+        border-radius: 55%;
+      }
+      #border-img-round {
+        border: 15px solid transparent;
+        padding: 20px;
+        border-image: url(border.png) 30 round;
+      }
+      #border-img-stretch {
+        border: 15px solid transparent;
+        padding: 20px;
+        border-image: url(border.png) 30 stretch;
+      }
+      p {
+        border: 1px solid rgba(226, 17, 17, 0.765);
+        padding: 15px;
+      }
+      p {
+        border: 1px solid rgba(232, 192, 33, 0.696);
+        width: 150px;
+        height: 150px;
+      }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <span class="brand">Project Lesson</span>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Chapter_01.html">Ch-1</a></li>
+        <li><a href="Chapter_02.html">Ch-2</a></li>
+        <li><a href="Chapter_03.html">Ch-3</a></li>
+        <li><a href="Chapter_04.html">Ch-4</a></li>
+        <li><a href="Chapter_05.html">Ch-5</a></li>
+        <li><a href="Chapter_06.html">Ch-6</a></li>
+        <li><a href="Chapter_07.html">Ch-7</a></li>
+        <li><a href="Chapter_08.html">Ch-8</a></li>
+        <li><a href="Chapter_11.html">Ch-11</a></li>
+        <li><a href="Chapter_12.html">Ch-12</a></li>
+        <li><a href="Chapter_13.html">Ch-13</a></li>
+        <li><a href="Chapter_14.html">Ch-14</a></li>
+        <li><a href="Chapter_15.html">Ch-15</a></li>
+        <li><a href="Chapter_16.html">Ch-16</a></li>
+        <li><a href="Chapter_17.html">Ch-17</a></li>
+        <li><a href="Chapter_18.html">Ch-18</a></li>
+        <li><a href="Chapter_19.html">Ch-19</a></li>
+        <li><a href="Chapter_20.html">Ch-20</a></li>
+        <li><a href="Chapter_21.html">Ch-21</a></li>
+        <li><a href="Chapter_22.html">Ch-22</a></li>
+    </ul>
+</nav>
+<p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_14</h1></p>
+    <h1 style="background-color: yellowgreen">Ex01(Border Box)</h1>
+  <pre id="my-element">
+    #my-element1 {
+      width: 300px;
+      height: 300px;
+      padding: 15px;
+      border: 
+      4px solid rgba(255,0,0,.868);
+      margin: 8px;
+      box-sizing: border-box;
+    }
+  </pre>
+  </pre>
+  <span id="result"></span>
+  <script>
+    var myElement = document.getElementById("my-element1");
+    var width = myElement.offsetWidth;
+    var height = myElement.offsetHeight;
+    // document.getElementById("result").innerHTML = "Element size:
+    width = " + width + ", height = " + height;"
+  </script>
+
+    <h1 style="background-color: yellowgreen">Ex02(Content Box)</h1>
+    <pre id="my-element">
+        #my-element2 {
+          width: 200px;
+          height: 200px;
+          padding: 10px;
+          border: 5px solid red;
+          margin: 8px;
+          box-sizing: border-box;
+          }
+      </pre
+        >
+        <span id="result"></span>
+        <script>
+          var myElement = document.getElementById("my-element2");
+          var width = myElement.offsetWidth;
+          var height = myElement.offsetHeight;
+        //   document.getElementById("result").innerHTML = "Element size:
+          width = " + width + ", height = " + height;"
+        </script>
+    
+    <h1 style="background-color: yellowgreen">Ex03(CSS Margins)</h1>
+    <div id="parent1">
+        <div id="child1">
+          This element has a top margin of 60px, a right margin of 40px, a bottom
+          margin of 60px, and a left margin of 40px.
+        </div>
+      </div>
+
+    <h1 style="background-color: yellowgreen">Ex04(Auto Margin)</h1>
+    <div id="parent2">
+        <div id="child2">Element has an auto margin.</div>
+      </div>
+
+    <h1 style="background-color: yellowgreen">Ex05(Collapsing Margins)</h1>
+    <div id="parent3">
+        <div id="child-one3">This element has a margin of 35px.</div>
+        <div id="child-two3">This element has a margin of 65px.</div>
+      </div>
+
+    <h1 style="background-color: yellowgreen">Ex06(CSS Outline)</h1>
+    <p>This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex07(Border Styles)</h1>
+    p>This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex08(CSS Border Radius)</h1>
+    <p>border-radius: 5px:</p>
+    <p id="p1"></p>
+    <p>border-radius: 55%:</p>
+    <p id="p2"></p>
+
+    <h1 style="background-color: yellowgreen">Ex09(CSS Border Images)</h1>
+    <p id="border-img-round"></p>
+    <p id="border-img-stretch"></p>
+
+    <h1 style="background-color: yellowgreen">Ex10(CSS Padding)</h1>
+    <p>This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex11(CSS Width and Height)</h1>
+    <p>This is a latter.</p>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+</body>
+</html>

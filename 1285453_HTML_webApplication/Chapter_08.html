@@ -1,0 +1,84 @@
+<!-- Ex01(Data URIs)
+Ex02(Block Elements)
+Ex03(Inline Elements)
+Ex04(Inline-block Elements) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My new Website</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+  <nav class="nav">
+    <span class="brand">Project Lesson</span>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Chapter_01.html">Ch-1</a></li>
+      <li><a href="Chapter_02.html">Ch-2</a></li>
+      <li><a href="Chapter_03.html">Ch-3</a></li>
+      <li><a href="Chapter_04.html">Ch-4</a></li>
+      <li><a href="Chapter_05.html">Ch-5</a></li>
+      <li><a href="Chapter_06.html">Ch-6</a></li>
+      <li><a href="Chapter_07.html">Ch-7</a></li>
+      <li><a href="Chapter_08.html">Ch-8</a></li>
+      <li><a href="Chapter_11.html">Ch-11</a></li>
+      <li><a href="Chapter_12.html">Ch-12</a></li>
+      <li><a href="Chapter_13.html">Ch-13</a></li>
+      <li><a href="Chapter_14.html">Ch-14</a></li>
+      <li><a href="Chapter_15.html">Ch-15</a></li>
+      <li><a href="Chapter_16.html">Ch-16</a></li>
+      <li><a href="Chapter_17.html">Ch-17</a></li>
+      <li><a href="Chapter_18.html">Ch-18</a></li>
+      <li><a href="Chapter_19.html">Ch-19</a></li>
+      <li><a href="Chapter_20.html">Ch-20</a></li>
+      <li><a href="Chapter_21.html">Ch-21</a></li>
+      <li><a href="Chapter_22.html">Ch-22</a></li>
+    </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_08</h1></p>
+
+  <!-- Ex01(Data URIs) -->
+  <h1 style="background-color: yellowgreen">Ex01(Data URIs)</h1>
+  <textarea name="input" cols="40">
+Please
+download the link</textarea>
+  <a href="javascript:void(0)" download="data.txt"> Download Text </a>
+  <script type="text/javascript">
+    var input = document.querySelector("textarea[ name = 'input' ]");
+    var download = document.querySelector("a[ download ]");
+
+    input.addEventListener("input", updateDownloadHref, true);
+
+    updateDownloadHref();
+    function updateDownloadHref() {
+      var text = input.value;
+
+      download.setAttribute(
+        "href",
+        "data:text/plain;charset=utf-8," + encodeURIComponent(text)
+      );
+    }
+  </script>
+
+  <!-- Ex02(Block Elements) -->
+  <h1 style="background-color: yellowgreen">Ex02(Block Elements)</h1>
+
+  <body style="display: block"></body>
+
+  <!-- Ex03(Inline Elements) -->
+  <h1 style="background-color: yellowgreen">Ex03(Inline Elements)</h1>
+
+  <body style="display: inline"></body>
+
+  <!-- Ex04(Inline-block Elements) -->
+  <h1 style="background-color: yellowgreen">Ex04(Inline-block Elements)</h1>
+
+  <body style="display: inline-block"></body>
+  <div id="backDiv">
+    <a href="home.html">Back to home</a>
+  </div>
+</body>
+
+</html>

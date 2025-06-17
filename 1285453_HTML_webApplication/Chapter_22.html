@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_22</title>
+    <link rel="stylesheet" href="rwd-grid22.css" />
+    <link rel="stylesheet" href="style22.css" />
+    <link rel="stylesheet" href="project.css">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      [class*="col-"] {
+        float: left;
+      }
+
+      /* For desktop: */
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 768px) {
+        /* For tablets: */
+        .col-m-1 {
+          width: 8.33%;
+        }
+
+        .col-m-2 {
+          width: 16.66%;
+        }
+
+        .col-m-3 {
+          width: 25%;
+        }
+
+        .col-m-4 {
+          width: 33.33%;
+        }
+
+        .col-m-5 {
+          width: 41.66%;
+        }
+
+        .col-m-6 {
+          width: 50%;
+        }
+
+        .col-m-7 {
+          width: 58.33%;
+        }
+
+        .col-m-8 {
+          width: 66.66%;
+        }
+
+        .col-m-9 {
+          width: 75%;
+        }
+
+        .col-m-10 {
+          width: 83.33%;
+        }
+
+        .col-m-11 {
+          width: 91.66%;
+        }
+
+        .col-m-12 {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_22</h1></p>
+    <h1 style="background-color: yellowgreen">Ex01(RWD Grid View)</h1>
+    <div class="row">
+      <div class="col-3 col-m-3">Num 1</div>
+      <div class="col-6 col-m-9">Num 2</div>
+      <div class="col-3 col-m-12">Num 3</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex02(Desktop-First-RWD Grid View)
+    </h1>
+    <div class="row">
+      <div class="col-3 col-m-3">Num 1</div>
+      <div class="col-6 col-m-9">Num 2</div>
+      <div class="col-3 col-m-12">Num 3</div>
+    </div>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>

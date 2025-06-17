@@ -1,0 +1,248 @@
+<!-- Ex01(Web Forms)
+Ex02(input and label)
+Ex03(textarea)
+Ex04(select and option)
+Ex05(button)
+Ex06(fieldset and legend)
+Ex07(datalist)
+Ex08(Files)
+Ex09(Date and Time)
+Ex10(Colors)
+Ex11(HTML Input Attributes)
+Ex12( placeholder)
+Ex13(readonly)
+Ex14(disabled)
+Ex15(size)
+Ex16(multiple)
+Ex17(step)
+Ex18( autofocus)
+Ex18(width and height)
+Ex19(autocomplete)
+Ex20(Form Validation(   minlength))
+Ex21(maxlength)
+Ex22(min and max)
+Ex23(required)
+Ex24(pattern)
+Ex25(Styles for The Invalid Inputs) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chapter_05</title>
+  <style>
+    p {
+      margin-bottom: 5px;
+    }
+
+    input:invalid {
+      background-color: rgba(109, 214, 56, 0.918);
+    }
+
+    input:invalid:required {
+      background-color: rgba(228, 82, 123, 0.922);
+    }
+
+    input:out-of-range {
+      background-color: rgba(193, 113, 21, 0.062);
+    }
+  </style>
+  <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+  <nav class="nav">
+    <span class="brand">Project Lesson</span>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Chapter_01.html">Ch-1</a></li>
+      <li><a href="Chapter_02.html">Ch-2</a></li>
+      <li><a href="Chapter_03.html">Ch-3</a></li>
+      <li><a href="Chapter_04.html">Ch-4</a></li>
+      <li><a href="Chapter_05.html">Ch-5</a></li>
+      <li><a href="Chapter_06.html">Ch-6</a></li>
+      <li><a href="Chapter_07.html">Ch-7</a></li>
+      <li><a href="Chapter_08.html">Ch-8</a></li>
+      <li><a href="Chapter_11.html">Ch-11</a></li>
+      <li><a href="Chapter_12.html">Ch-12</a></li>
+      <li><a href="Chapter_13.html">Ch-13</a></li>
+      <li><a href="Chapter_14.html">Ch-14</a></li>
+      <li><a href="Chapter_15.html">Ch-15</a></li>
+      <li><a href="Chapter_16.html">Ch-16</a></li>
+      <li><a href="Chapter_17.html">Ch-17</a></li>
+      <li><a href="Chapter_18.html">Ch-18</a></li>
+      <li><a href="Chapter_19.html">Ch-19</a></li>
+      <li><a href="Chapter_20.html">Ch-20</a></li>
+      <li><a href="Chapter_21.html">Ch-21</a></li>
+      <li><a href="Chapter_22.html">Ch-22</a></li>
+    </ul>
+  </nav>
+  <<p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_05</h1></p>
+  <br>
+  <!-- Ex01(Web Forms) -->
+  <h1 style="background-color: yellowgreen">Ex01(Web Forms)</h1>
+  <form action="/login">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="yourname" /><br />
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="password" /><br />
+    <input type="submit" value="Log in" />
+  </form>
+
+  <!-- Ex02(input and label) -->
+  <h1 style="background-color: yellowgreen">Ex02(input and label)</h1>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" />
+
+  <!-- Ex03(textarea) -->
+  <h1 style="background-color: yellowgreen">Ex03(textarea)</h1>
+  <textarea name="comment" rows="5" cols="40"> </textarea>
+
+  <!-- Ex04(select and option) -->
+  <h1 style="background-color: yellowgreen">Ex04(select and option)</h1>
+  <select name="byike">
+    <option value="fz">Fz</option>
+    <option value="hero">Hero</option>
+    <option value="bajaj">Bajaj</option>
+    <option value="enfield">Enfield</option>
+  </select>
+
+  <!-- Ex05(button) -->
+  <h1 style="background-color: yellowgreen">Ex05(button)</h1>
+  <button onclick="alert('Ok')">Submit</button>
+
+  <!-- Ex06(fieldset and legend) -->
+  <h1 style="background-color: yellowgreen">Ex06(fieldset and legend)</h1>
+  <fieldset>
+    <legend>Information:</legend>
+    <label for="finame">First name:</label>
+    <input type="text" id="finame" name="finame" />
+    <br /><br />
+    <label for="laname">Last name:</label>
+    <input type="text" id="laname" name="laname" />
+    <br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+  </fieldset>
+
+  <!-- Ex07(datalist) -->
+  <h1 style="background-color: yellowgreen">Ex07(datalist)</h1>
+  <datalist id="byike-list">
+    <option value="Fz"></option>
+    <option value="Hero"></option>
+    <option value="Bajaj"></option>
+    <option value="Enfield"></option>
+  </datalist>
+  <input type="text" name="byike" list="byike-list" />
+
+  <!-- Ex08(Files) -->
+  <h1 style="background-color: yellowgreen">Ex08(Files)</h1>
+  <input type="file" name="pictures" />
+
+  <!-- Ex09(Date and Time) -->
+  <h1 style="background-color: yellowgreen">Ex09(Date and Time)</h1>
+  <input type="date" name="joinDay" />
+  <br />
+  <input type="time" name="relaxTime" />
+
+  <!-- Ex10(Colors) -->
+  <h1 style="background-color: yellowgreen">Ex10(Colors)</h1>
+  <input type="color" name="colorInfo" />
+
+  <!-- Ex11(HTML Input Attributes) -->
+  <h1 style="background-color: yellowgreen">Ex11(HTML Input Attributes)</h1>
+  <form action="/login">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="Tofayel" />
+  </form>
+
+  <!-- Ex12( placeholder) -->
+  <h1 style="background-color: yellowgreen">Ex12( placeholder)</h1>
+  <input type="text" name="name" placeholder="Your name
+  here" />
+
+  <!-- Ex13(readonly) -->
+  <h1 style="background-color: yellowgreen">Ex13(readonly)</h1>
+  <input type="text" name="name" value="Tofayel" readonly />
+
+  <!-- Ex14(disabled) -->
+  <h1 style="background-color: yellowgreen">Ex14(disabled)</h1>
+  <input type="text" name="name" value="Tofayel" disabled />
+  <input type="submit" disabled />
+
+  <!-- Ex15(size) -->
+  <h1 style="background-color: yellowgreen">Ex15(size)</h1>
+  <input type="text" name="name" size="8" />
+  <select name="byike" size="5">
+    <option value="fz">Fz</option>
+    <option value="hero">Hero</option>
+    <option value="enfield">Enfield</option>
+    <option value="tvs">Tvs</option>
+  </select>
+
+  <!-- Ex16(multiple) -->
+  <h1 style="background-color: yellowgreen">Ex16(multiple)</h1>
+  <select name="byike" multiple>
+    <option value="fz">Fz</option>
+    <option value="hero">Hero</option>
+    <option value="enfield">Enfield</option>
+    <option value="tvs">Tvs</option>
+  </select>
+
+  <!-- Ex17(step) -->
+  <h1 style="background-color: yellowgreen">Ex17(step)</h1>
+  <input type="number" name="point" step="3" />
+
+  <h1 style="background-color: yellowgreen">Ex18( autofocus)</h1>
+  <input type="text" name="name" autofocus />
+
+  <!-- Ex18(width and height) -->
+  <h1 style="background-color: yellowgreen">Ex18(width and height)</h1>
+  <iframe src="https://www.isdb-bisew.org/it-scholarship-programme/it-scholarship-courses" width="700"
+    height="500"></iframe>
+
+  <!-- Ex19(autocomplete) -->
+  <h1 style="background-color: yellowgreen">Ex19(autocomplete)</h1>
+  <input type="text" name="name" autocomplete />
+
+  <h1 style="background-color: yellowgreen">
+    Ex20(Form Validation(minlength))
+  </h1>
+  <input type="text" name="yourname" minlength="8" />
+
+  <!-- Ex21(maxlength) -->
+  <h1 style="background-color: yellowgreen">Ex21(maxlength)</h1>
+  <input type="text" name="yourname" maxlength="7" />
+
+  <!-- Ex22(min and max) -->
+  <h1 style="background-color: yellowgreen">Ex22(min and max)</h1>
+  <input type="number" name="size" min="1" max="8" />
+
+  <!-- Ex23(required) -->
+  <h1 style="background-color: yellowgreen">Ex23(required)</h1>
+  <input type="text" name="name" required />
+
+  <!-- Ex24(pattern) -->
+  <h1 style="background-color: yellowgreen">Ex24(pattern)</h1>
+  <input type="text" name="pass" pattern="[A-z]{4}" title="Four
+ letter code." />
+
+  <!-- Ex25(Styles for The Invalid Inputs) -->
+  <h1 style="background-color: yellowgreen">
+    Ex25(Styles for The Invalid Inputs)
+  </h1>
+  <form action="">
+    <p>Input text is required:</p>
+    <input type="text" name="fname" required />
+
+    <p>The range of number input must be 1 - 5:</p>
+    <input type="number" name="quantity" min="1" max="5" />
+
+    <p>Three-letter code must be a input this text:</p>
+    <input type="text" name="pass" pattern="[A-z]{4}" title="Four letter code." />
+  </form>
+  <div id="backDiv">
+    <a href="home.html">Back to home</a>
+  </div>
+</body>
+
+</html>

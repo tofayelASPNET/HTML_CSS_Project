@@ -1,0 +1,11 @@
+.container5 {
+  border: 1px solid rgba(0, 0, 0, 0.575);
+  width: 220px;
+  height: 120px;
+}
+.child5 {
+  margin: 15px;
+  border: 1px solid rgba(255, 0, 0, 0.575);
+  background-color: rgba(190, 167, 167, 0.674);
+  height: 160px;
+}

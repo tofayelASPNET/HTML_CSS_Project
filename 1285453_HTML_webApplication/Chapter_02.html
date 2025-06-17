@@ -1,0 +1,296 @@
+<!-- 01.(Headings)
+02.( Paragraphs)
+03.(External Anchors)
+04.( Internal Anchors)
+05.(Download Links)
+06.( Image Maps)
+07.(Responsive Pictures)
+08.(Unordered List)
+09.(Ordered List)
+10.(Description Lists)
+11.( Tables)
+12.(Line Breaking)
+13.( Thematic Breaking)
+14.(progress)
+15.(meter)
+16.(code)
+17.(pre)
+18.(Iframes)
+19.(HTML Entities) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_02</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid rgba(128, 128, 128, 0.886);
+      }
+      .days {
+        background-color: rgba(102, 51, 153, 0.884);
+      }
+      .weekend {
+        background-color: rgba(255, 235, 205, 0.927);
+      }
+      #iframe {
+        width: 700px;
+        height: 5dvh;
+        border: none;
+      }
+    </style>
+    <link rel="stylesheet" href="project.css">
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_02</h1></p>
+  <br>
+  <!-- Ex 01(Headings) -->
+    <h1 style="background-color: yellowgreen">Ex 01(Headings)</h1>
+    <h1>Tofayel Number 1</h1>
+    <h2>Tofayel Number 2</h2>
+    <h3>Tofayel Number 3</h3>
+    <h4>Tofayel Number 4</h4>
+    <h5>Tofayel Number 5</h5>
+    <h6>Tofayel Number 6</h6>
+
+    <!-- Ex 02( Paragraphs) -->
+    <h1 style="background-color: yellowgreen">Ex 02( Paragraphs)</h1>
+    <h1>Heading number 1</h1>
+    <p>This is note.It is my first paragraph.</p>
+
+    <!-- Ex 03(External Anchors) -->
+    <h1 style="background-color: yellowgreen">Ex 03(External Anchors)</h1>
+    <h1>New home Page</h1>
+    <a href="/contact.html">Contact Page Information</a>
+    <a href="/user/login.html">Login Page Information</a>
+
+    <!-- Ex04( Internal Anchors) -->
+    <h1 style="background-color: yellowgreen">Ex04( Internal Anchors)</h1>
+    <h1>New home Page</h1>
+    <a href="#cake">Go to My flag</a>
+
+    <h2 id="flag">My flag</h2>
+    <img src="360_flag.jpg" alt="This is an bd flag" height="950" />
+
+    <h2 id="flag">My flag</h2>
+    <img src="360_flag.jpg" alt="This is aN BD flag" height="950" />
+
+    <a href="#apple">Go to My flag</a>
+    <a href="#">Back to the top</a>
+
+    <!-- Ex05(Download Links) -->
+    <h1 style="background-color: yellowgreen">Ex05(Download Links)</h1>
+    <a href="360_flag.jpg" download="new-name">Download Image</a>
+
+    <!-- Ex06( Image Maps) -->
+    <h1 style="background-color: yellowgreen">Ex06( Image Maps)</h1>
+    <img
+      src="360_flag.jpg"
+      alt="Navigation bar"
+      usemap="#nav-bar"
+      width="150"
+      height="70"
+    />
+
+    <map name="nav-bar">
+      <area shape="rect" coords="25,25,85,65" alt="Computer" href="#flag" />
+      <area shape="circle" coords="125,45,25" alt="Coffee" href="#flag" />
+    </map>
+
+    <h2 id="apple">My flag</h2>
+    <img src="360_flag.jpg" alt="This is an flag" height="950" />
+
+    <h2 id="flag">My Cake</h2>
+    <img src="360_flag.jpg"This is a flag" height="950" />
+
+    <!-- Ex07(Responsive Pictures) -->
+    <h1 style="background-color: yellowgreen">Ex07(Responsive Pictures)</h1>
+    <p>Resize the browser to load different images on other website..</p>
+
+    <!-- Ex08(Unordered List) -->
+    <h1 style="background-color: yellowgreen">Ex08(Unordered List)</h1>
+    <ul>
+      <li>Tofayel Number 1</li>
+      <li>Tofayel Number 1</li>
+      <li>Tofayel Number 1</li>
+    </ul>
+
+    <!-- Ex09(Ordered List) -->
+    <h1 style="background-color: yellowgreen">Ex09(Ordered List)</h1>
+    <ol>
+      <li>Tofayel Number 1</li>
+      <li>Tofayel Number 2</li>
+      <li>Tofayel Number 3</li>
+    </ol>
+
+    <!-- Ex10(Description Lists) -->
+    <h1 style="background-color: yellowgreen">Ex10(Description Lists)</h1>
+    <dl>
+      <dt>HTML dt work</dt>
+      <dd>The standard is markup language for Web pages.</dd>
+      <dt>CSS work</dt>
+      <dd>The language is we use to style an HTML document.</dd>
+      <dt>JavaScript work</dt>
+      <dd>The world's most popular programming language.</dd>
+    </dl>
+
+    <!-- Ex11( Tables) -->
+    <h1 style="background-color: yellowgreen">Ex11( Tables)</h1>
+    <table>
+      <caption>
+        September 2022
+      </caption>
+      <colgroup>
+        <col span="5" class="month" />
+        <col span="2" class="weekend" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Jan</th>
+          <th>Feb</th>
+          <th>Mar</th>
+          <th>Apr</th>
+          <th>May</th>
+          <th>Jun</th>
+          <th>Jul</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+          <td colspan="2"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Ex12(Line Breaking) -->
+    <h1 style="background-color: yellowgreen">Ex12(Line Breaking)</h1>
+    <p>
+      I've added a new line break.<br />Here this sentence will be on the second
+      line.
+    </p>
+
+    <!-- Ex13( Thematic Breaking) -->
+    <h1 style="background-color: yellowgreen">Ex13( Thematic Breaking)</h1>
+    <h1>Web Development work</h1>
+    <p>For web pages HTML is the standard markup language.</p>
+    <hr />
+    <p>We use to style an HTML documentCSS is the language .</p>
+    <hr />
+    <p>JavaScript is the world's most popular programming language.</p>
+
+    <!-- Ex14(progress) -->
+    <h1 style="background-color: yellowgreen">Ex14(progress)</h1>
+    <p>
+      Uploading:
+      <progress value="55" max="90"></progress>
+      50%
+    </p>
+
+    <!-- Ex15(meter) -->
+    <h1 style="background-color: yellowgreen">Ex15(meter)</h1>
+    <p>
+      Disk usage:
+      <meter value="50" max="115"></meter>
+      64GB of 128GB
+    </p>
+
+    <!-- Ex16(code) -->
+    <h1 style="background-color: yellowgreen">Ex16(code)</h1>
+    <p>JavaScript code:</p>
+    <code>var x = 15;</code>
+
+    <!-- Ex17(pre) -->
+    <h1 style="background-color: yellowgreen">Ex17(pre)</h1>
+    <pre>
+      Pre element text in a is displayed
+      in the browser’s default monospace font,
+      and it preserves both spaces
+      and line breaks.
+    </pre>
+
+    <!-- Ex18(Iframes) -->
+    <h1 style="background-color: yellowgreen">Ex18(Iframes)</h1>
+    <h1>Web Development Books</h1>
+    <iframe
+      id="iframe"
+      src="https://www.isdb-bisew.org/it-scholarship-programme/it-scholarship-courses"
+    ></iframe>
+
+    <!-- Ex19(HTML Entities) -->
+    <h1 style="background-color: yellowgreen">Ex19(HTML Entities)</h1>
+    <footer>&copy; 2025, Md Tofayel</footer>
+
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>

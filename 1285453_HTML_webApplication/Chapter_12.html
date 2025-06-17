@@ -1,0 +1,462 @@
+<!-- Ex01(Universal Selector)
+Ex02(Type Selector)
+Ex03(ID Selector)
+Ex04(ID Selector)
+Ex05(Class Selector)
+Ex06(Multiple-class Selector)
+Ex07(Status of Links)
+Ex08(Cursor Interaction)
+Ex09(Status of Elements)
+Ex10( Form Validation)
+Ex11(Child Elements)
+Ex12(ast-child)
+Ex13(nth-child(N))
+Ex14(only-child)
+Ex15( Type of elements(fast of type))
+Ex16(last-of-type)
+Ex17(nth-of-type(N))
+Ex18(nth-last-of-type(N))
+Ex19(only-of-type)
+Ex20(Others Pseudo-classes(root))
+Ex21(target)
+Ex22(not(selector))
+Ex23(Pseudo-class Chain)
+Ex24(CSS Pseudo-element(first-letter))
+Ex24(first-line)
+Ex25(before)
+Ex26(after)
+Ex27(selection)
+Ex28(Descendant selector)
+Ex29( Child Selector )
+Ex29(Adjacent Sibling Selector )
+Ex30(attribute)
+Ex30(General Sibling Selector)
+Ex31(attribute value) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_12</title>
+    <link rel="stylesheet" href="project.css">
+    <style>
+      body * p {
+        color: rgba(255, 0, 111, 0.934);
+      }
+      p {
+        color: rgba(219, 233, 23, 0.929);
+      }
+      #text {
+        color: rgba(10, 220, 24, 0.929);
+      }
+      #text1 {
+        color: rgba(255, 0, 98, 0.906);
+      }
+      .text2 {
+        color: rgba(237, 21, 32, 0.865);
+      }
+      .text.main3 {
+        color: rgba(55, 215, 23, 0.925);
+      }
+
+      .text3 {
+        color: rgba(0, 17, 255, 0.858);
+      }
+      :link {
+        color: rgba(227, 34, 159, 0.906);
+      }
+
+      :visited {
+        color: rgba(0, 255, 0, 0.881);
+      }
+      :focus {
+        color: rgba(0, 255, 42, 0.925);
+      }
+
+      :hover {
+        color: rgba(128, 0, 15, 0.877);
+      }
+
+      :active {
+        color: rgba(119, 119, 133, 0.913);
+      }
+      button:focus {
+        color: rgba(233, 13, 13, 0.925);
+      }
+
+      button:hover {
+        color: rgba(0, 128, 0, 0.874);
+      }
+
+      button:active {
+        color: rgba(0, 0, 255, 0.874);
+      }
+      :enabled {
+        background-color: rgba(76, 149, 149, 0.92);
+      }
+
+      :disabled {
+        background-color: #d55d5de7;
+      }
+      input:invalid {
+        background-color: rgba(201, 24, 50, 0.874);
+      }
+      p:first-child {
+        color: rgba(0, 255, 38, 0.92);
+      }
+      p:last-child {
+        color: rgba(240, 230, 230, 0.929);
+      }
+      p:nth-child(2) {
+        color: rgba(184, 208, 26, 0.925);
+      }
+      p:only-child {
+        color: rgba(148, 230, 168, 0.92);
+      }
+      p:first-of-type {
+        color: rgba(195, 255, 0, 0.961);
+      }
+      p:last-of-type {
+        color: rgba(8, 0, 255, 0.947);
+      }
+      p:nth-of-type(2) {
+        color: rgba(255, 0, 0, 0.144);
+      }
+      p:nth-last-of-type(2) {
+        color: rgba(255, 0, 0, 0.267);
+      }
+      p:only-of-type {
+        color: rgba(0, 255, 38, 0.39);
+      }
+      div:empty {
+        height: 30px;
+        border: 1px solid rgba(255, 0, 0, 0.288);
+      }
+      :target {
+        border: 1px solid rgba(0, 255, 8, 0.473);
+      }
+      input:not([type="submit"]) {
+        background-color: rgba(0, 255, 255, 0.313);
+      }
+      .lnk:not(:first-child):not(:last-child) {
+        color: rgba(0, 255, 17, 0.24);
+      }
+      p::first-line {
+        color: rgba(0, 255, 85, 0.628);
+      }
+      p::first-letter {
+        font-size: 20px;
+        color: rgba(0, 255, 55, 0.438);
+      }
+      .required::before {
+        content: "* ";
+        color: rgba(0, 42, 255, 0.374);
+      }
+      .required::after {
+        content: "* ";
+        color: rgba(0, 255, 98, 0.489);
+      }
+      p::selection {
+        color: rgba(0, 255, 38, 0.511);
+        background-color: rgba(255, 255, 0, 0.381);
+      }
+      .container1 p {
+        color: rgba(242, 255, 0, 0.578);
+      }
+      .container2 > p {
+        color: rgba(26, 255, 0, 0.336);
+      }
+      div + p {
+        color: rgba(47, 255, 0, 0.541);
+      }
+      [class] {
+        color: rgba(238, 255, 0, 0.815);
+      }
+      div ~ p {
+        color: rgba(187, 255, 0, 0.537);
+      }
+      [class="many-text"] {
+        color: rgba(0, 255, 174, 0.463);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_12</h1></p>
+    <div>
+      <h1 style="background-color: yellowgreen">Ex01(Universal Selector)</h1>
+      <p>Many text</p>
+    </div>
+    <p>More text</p>
+
+    <h1 style="background-color: yellowgreen">Ex02(Type Selector)</h1>
+    <div>
+      <p>Many text</p>
+    </div>
+    <p>More text</p>
+
+    <h1 style="background-color: yellowgreen">Ex03(ID Selector)</h1>
+    <div>
+      <p id="text">Many text</p>
+    </div>
+    <p>More text</p>
+
+    <h1 style="background-color: yellowgreen">Ex04(ID Selector)</h1>
+    <div>
+      <p id="text1">More text</p>
+    </div>
+    <p>Many text</p>
+
+    <h1 style="background-color: yellowgreen">Ex05(Class Selector)</h1>
+    <div>
+      <p class="text2">Many text</p>
+      <p class="text2">More text</p>
+    </div>
+    <p>More text</p>
+
+    <h1 style="background-color: yellowgreen">Ex06(Multiple-class Selector)</h1>
+    <div>
+      <p class="text main3">Many text</p>
+      <p class="text3">More text</p>
+    </div>
+    <p>More text</p>
+
+    <h1 style="background-color: yellowgreen">Ex07(Status of Links)</h1>
+    <a>Does not a link</a>
+    <a href="https://mdtofayel.com" target="_blank">My new Website</a>
+    <a href="https://fonts.google.com" target="_blank">Google Fonts</a>
+
+    <h1 style="background-color: yellowgreen">Ex08(Cursor Interaction)</h1>
+    <p>Press TAB to remove button on the the focus.</p>
+    <button>This is a button</button>
+
+    <h1 style="background-color: yellowgreen">Ex09(Status of Elements)</h1>
+    <p>User's information</p>
+    <p>Your Name: <input type="text" value="your name" disabled /></p>
+    <p>Email: <input type="text" value="abc@email.com" /></p>
+
+    <h1 style="background-color: yellowgreen">Ex10( Form Validation)</h1>
+    <form action="">
+      <p>This text input must be a two-letter code:</p>
+      <input
+        type="text"
+        name="code"
+        pattern="[A-z]{2}"
+        title="Two letter code."
+        value="a"
+      />
+    </form>
+
+    <h1 style="background-color: yellowgreen">Ex11(Child Elements)</h1>
+    <div>
+      <p>State-Line 1</p>
+      <p>State-Line 2</p>
+    </div>
+    <p>State-Line 3</p>
+    <p>State-Line 4</p>
+
+    <h1 style="background-color: yellowgreen">Ex12(ast-child)</h1>
+    <div>
+      <p>State-Line 1</p>
+      <p>State-Line 2</p>
+    </div>
+    <p>State-Line 3</p>
+    <p>State-Line 4</p>
+
+    <h1 style="background-color: yellowgreen">Ex13(nth-child(N))</h1>
+    <div>
+      <p>State-Line 1</p>
+      <p>State-Line 2</p>
+      <p>State-Line 3</p>
+    </div>
+    <p>State-Line 4</p>
+    <p>State-Line 5</p>
+    <p>State-Line 6</p>
+
+    <h1 style="background-color: yellowgreen">Ex14(only-child)</h1>
+    <div>
+      <p>State-Line 1</p>
+    </div>
+    <p>State-Line 2</p>
+    <p>State-Line 3</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex15( Type of elements(fast of type))
+    </h1>
+    <div>
+      <div>State-Line 1</div>
+      <p>State-Line 2</p>
+      <p>State-Line 3</p>
+    </div>
+    <p>State-Line 4</p>
+
+    <h1 style="background-color: yellowgreen">Ex16(last-of-type)</h1>
+    <p>State-Line 1</p>
+    <div>
+      <p>State-Line 2</p>
+      <p>State-Line 3</p>
+      <div>State-Line 4</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex17(nth-of-type(N))</h1>
+    <div>
+      <div>State-Line 1</div>
+      <p>State-Line 2</p>
+      <p>State-Line 3</p>
+    </div>
+    <p>State-Line 4</p>
+
+    <h1 style="background-color: yellowgreen">Ex18(nth-last-of-type(N))</h1>
+    <p>State-Line 1</p>
+    <div>
+      <p>State-Line 2</p>
+      <p>State-Line 3</p>
+      <div>State-Line 4</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex19(only-of-type)</h1>
+    <div>
+      <div>State-Line 1</div>
+      <p>State-Line 2</p>
+      <p>State-Line 3</p>
+    </div>
+    <p>State-Line 4</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex20(Others Pseudo-classes(root))
+    </h1>
+    <div></div>
+    <div></div>
+    <div>This is empty!</div>
+
+    <h1 style="background-color: yellowgreen">Ex21(target)</h1>
+    <a href="#target1">Option target 1</a>
+    <a href="#target2">Option target 2</a>
+    <p id="target1">Target 1</p>
+    <p id="target2">Target 2</p>
+
+    <h1 style="background-color: yellowgreen">Ex22(not(selector))</h1>
+    <p>User's information</p>
+    <p>Address: <input type="text" value="Your address" /></p>
+    <p>Email: <input type="text" value="abc@email.com" /></p>
+    <input type="submit" value="Submit" />
+
+    <h1 style="background-color: yellowgreen">Ex23(Pseudo-class Chain)</h1>
+    <div>
+      <a class="lnk" href="#">Articles</a>
+      <a class="lnk" href="#">Links</a>
+      <a class="lnk" href="#">About</a>
+      <a class="nav-lnk" href="#">Newsletter</a>
+    </div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex24(CSS Pseudo-element(first-letter))
+    </h1>
+    <p>My latter has<br />three lines.</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex24(CSS Pseudo-element(first-letter))
+    </h1>
+    <h1>My footer</h1>
+    <p>My paragraph</p>
+
+    <h1 style="background-color: yellowgreen">Ex25(before)</h1>
+    <p>
+      <label class="required">Your Name: </label>
+      <input type="text" />
+    </p>
+    <p>
+      <label>Email: </label>
+      <input type="text" />
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex26(after)</h1>
+    <p>
+      <label class="required">Your Name: </label>
+      <input type="text" />
+    </p>
+    <p>
+      <label>Email: </label>
+      <input type="text" />
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex27(selection)</h1>
+    <p>Please select more text in this latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex28(Descendant selector)</h1>
+    <div class="container1">
+      <div>
+        <p>State-line 1</p>
+      </div>
+      <p>State-line 2</p>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex29( Child Selector )</h1>
+    <div class="container2">
+      <div>
+        <p>State-line 1</p>
+      </div>
+      <p>State-line 2</p>
+    </div>
+
+    <h1 style="background-color: yellowgreen">
+      Ex29(Adjacent Sibling Selector )
+    </h1>
+    <div class="container3">
+      <div>
+        <p>State-line 1</p>
+      </div>
+      <p>State-line 2</p>
+      <p>State-line 3</p>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex30(attribute)</h1>
+    <div>
+      <p class="text">Many text</p>
+    </div>
+    <p>More text</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex30(General Sibling Selector)
+    </h1>
+    <div class="container4">
+      <div>
+        <p>State-line 1</p>
+      </div>
+      <p>State-line 2</p>
+      <p>State-line 3</p>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex31(attribute value)</h1>
+    <div>
+      <p class="many-text">Many text</p>
+    </div>
+    <p class="more-text">More text</p>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>

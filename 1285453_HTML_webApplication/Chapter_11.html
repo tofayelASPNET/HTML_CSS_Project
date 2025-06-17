@@ -1,0 +1,122 @@
+<!-- Ex01(Relative Lengths)
+Ex02( rem)
+Ex03( Shorthand Properties)
+Ex04(Inline CSS)
+Ex05(Internal CSS)
+Ex06(External CSS)
+Ex07(User Agent Style Sheets) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_11</title>
+    <link rel="stylesheet" href="style11.css" />
+    <link rel="stylesheet" href="project.css">
+    <style type="text/css">
+      article {
+        font-size: 30px;
+      }
+
+      .custom {
+        font-size: 2em;
+      }
+      .parent2 {
+        font-size: 20px;
+      }
+
+      .child2 {
+        font-size: 2rem;
+      }
+      div {
+        height: 40px;
+        border-color: rgba(17, 255, 0, 0.872);
+        border-style: solid;
+        border-top-width: 7px;
+        border-right-width: 12px;
+        border-bottom-width: 18px;
+        border-left-width: 22px;
+      }
+      p {
+        color: rgba(239, 15, 52, 0.92);
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_11</h1></p>
+
+  <!-- Ex01(Relative Lengths) -->
+    <h2 style="background-color: yellowgreen">Ex01(Relative Lengths)</h2>
+    <article>
+      <p>
+        This element does not have its style, so that the font-size will be
+        30px, inherited from its parent (article)
+      </p>
+      <p class="custom">
+        This element has style "font-size: 1.5em" so that the font-size will be
+        30px (30 * 2 = 45)
+      </p>
+    </article>
+
+    <!-- Ex02( rem) -->
+    <h1 style="background-color: yellowgreen">Ex02( rem)</h1>
+    <div class="parent2">
+      I'm 20px
+      <div class="child2">
+        I'm 32px, as expected
+        <div class="child2">I'm 32px, best!</div>
+      </div>
+    </div>
+
+    <!-- Ex03( Shorthand Properties) -->
+    <h1 style="background-color: yellowgreen">Ex03( Shorthand Properties)</h1>
+    Ex03( Shorthand Properties)
+
+    <!-- Ex04(Inline CSS) -->
+    <h1 style="background-color: yellowgreen">Ex04(Inline CSS)</h1>
+    <p style="color: rgba(207, 28, 106, 0.897); font-size: 30px">
+      This is the first latter.
+    </p>
+    <p>This is the second latter.</p>
+
+    <!-- Ex05(Internal CSS) -->
+    <h1 style="background-color: yellowgreen">Ex05(Internal CSS)</h1>
+
+    <!-- Ex06(External CSS) -->
+    <h1 style="background-color: yellowgreen">Ex06(External CSS)</h1>
+    <p>This is the first latter.</p>
+    <p>This is the second latter.</p>
+
+    Ex07(User Agent Style Sheets)
+    <h1 style="background-color: yellowgreen">Ex07(User Agent Style Sheets)</h1>
+    <p>This is the first latter.</p>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>

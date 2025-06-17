@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_18</title>
+    <link rel="stylesheet" href="style18.css" />
+    <link rel="stylesheet" href="project.css">
+    <style>
+      .container1 {
+        border: 1px solid rgba(108, 207, 33, 0.669);
+        width: 320px;
+        height: 110px;
+      }
+      .inline-blocks1 {
+        display: inline-block;
+        border: 1px solid rgba(255, 0, 225, 0.763);
+        height: 45px;
+      }
+      .normal-blocks1 {
+        border: 1px solid rgba(0, 0, 255, 0.475);
+      }
+      .hidden {
+        display: none;
+      }
+      .invisible {
+        visibility: hidden;
+      }
+      img {
+        width: 320px;
+        height: 220px;
+        border: 1px solid rgba(255, 0, 0, 0.82);
+        object-fit: contain;
+      }
+      .element {
+        cursor: pointer;
+      }
+      .container6 {
+        border: 1px solid rgba(215, 191, 10, 0.797);
+        width: 220px;
+        height: 110px;
+      }
+      .child6 {
+        margin: 15px;
+        border: 1px solid rgba(255, 0, 0, 0.388);
+        background-color: rgba(58, 6, 163, 0.075);
+        height: 150px;
+      }
+      .container7 {
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.621);
+        width: 220px;
+        height: 120px;
+      }
+      .child7 {
+        margin: 15px;
+        border: 1px solid rgba(255, 0, 0, 0.463);
+        background-color: rgba(255, 255, 255, 0.265);
+        height: 150px;
+      }
+      .container8 {
+        overflow: scroll;
+        border: 1px solid red;
+        width: 220px;
+        height: 120px;
+      }
+      .child8 {
+        margin: 15px;
+        border: 1px solid blue;
+        background-color: white;
+        height: 160px;
+      }
+      .container9 {
+        overflow: auto;
+        border: 1px solid rgba(179, 20, 20, 0.607);
+        width: 220px;
+        height: 120px;
+      }
+      .child9 {
+        margin: 15px;
+        border: 1px solid rgba(0, 34, 255, 0.591);
+        background-color: white;
+        height: 160px;
+      }
+      .container {
+        background-color: rgba(255, 0, 0, 0.541);
+        padding: 25px;
+        margin: 15px;
+      }
+      .container.opacity {
+        opacity: 0.6;
+      }
+
+      .container.transparent {
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .child {
+        border: 1px solid rgba(0, 0, 0, 0.443);
+      }
+      #p11 {
+        text-shadow: 2px 2px rgba(0, 255, 55, 0.742);
+      }
+      div {
+        border: 1px solid rgba(157, 56, 56, 0.71);
+        box-shadow: 4px 4px rgba(187, 34, 34, 0.776);
+      }
+      .newspaper {
+        column-count: 3;
+        column-gap: 30px;
+        column-rule-style: solid;
+        column-rule-width: 1px;
+        column-rule-color: rgba(63, 24, 154, 0.635);
+      }
+      .latter {
+        column-count: 3;
+        column-gap: 35px;
+        column-rule: 1px solid black;
+        column-width: 220px;
+      }
+      .latter15 {
+        column-count: 3;
+        column-gap: 45px;
+        column-rule: 1px solid rgba(185, 24, 24, 0.806);
+      }
+      #h15 {
+        column-span: all;
+      }
+      table {
+        border: 1px solid rgba(98, 128, 0, 0.705);
+      }
+      th {
+        border: 1px solid rgba(19, 221, 32, 0.836);
+      }
+
+      td {
+        border: 1px solid rgba(208, 14, 49, 0.76);
+      }
+      table {
+        border-collapse: collapse;
+        border: 1px solid rgba(34, 163, 213, 0.845);
+        width: 99%;
+      }
+      th {
+        border: 1px solid red;
+        height: 35px;
+      }
+      td {
+        border: 1px solid blue;
+        height: 55px;
+      }
+      table {
+        border-collapse: collapse;
+        border: 1px solid rgba(0, 128, 0, 0.808);
+        width: 99%;
+      }
+      th {
+        border: 1px solid rgba(255, 0, 0, 0.806);
+        height: 35px;
+      }
+      td {
+        border: 1px solid rgba(0, 0, 255, 0.774);
+        height: 55px;
+        text-align: center;
+        vertical-align: top;
+      }
+      .col {
+        display: inline-block;
+        width: 160px;
+      }
+      ul.circle {
+        list-style-type: circle;
+      }
+      ul.square {
+        list-style-type: square;
+      }
+      ol.upper-roman {
+        list-style-type: upper-roman;
+      }
+      ol.lower-alpha {
+        list-style-type: lower-alpha;
+      }
+      ul {
+        list-style-position: inside;
+      }
+      div {
+        width: 220px;
+        border: 1px solid rgba(165, 209, 6, 0.731);
+      }
+      .test21 {
+        transform: translate(35px, 70px);
+      }
+      div {
+        width: 210px;
+        border: 1px solid rgba(109, 76, 76, 0.84);
+      }
+      .test22 {
+        position: relative;
+        left: 105px;
+        top: 35px;
+        transform: scale(2, 3);
+      }
+      .div2 {
+        transform: rotate(185deg);
+      }
+      .div3 {
+        transform: rotate(-30deg);
+      }
+      div {
+        border: 1px solid rgba(17, 205, 101, 0.514);
+      }
+      .test24 {
+        transform: skewX(25deg);
+      }
+      .test34 {
+        transform: skewY(-15deg);
+      }
+      .test44 {
+        position: relative;
+        top: 65px;
+        transform: skew(25deg, 15deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_18</h1></p>
+    <h1 style="background-color: yellowgreen">Ex01(display)</h1>
+    <div class="container1">
+      <div class="inline-blocks1">I'm the 1st person</div>
+      <div class="inline-blocks1">I'm the 2nd person</div>
+      <div class="normal-blocks1">I'm the 3rd person</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex02(visibility)</h1>
+    <p>The <span class="hidden">hidden</span> element</p>
+    <p>The <span class="invisible">invisible</span> element</p>
+
+    <h1 style="background-color: yellowgreen">Ex03(CSS object-fit)</h1>
+    <img src="/download (4).jpg" />
+
+    <h1 style="background-color: yellowgreen">Ex04(Cursor)</h1>
+    <p class="element">This is a latter</p>
+
+    <h1 style="background-color: yellowgreen">Ex05(CSS Overflow)</h1>
+    <div class="container5">
+      <div class="child5">I am the real.</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex06(overflow)</h1>
+    <div class="container6">
+      <div class="child6">I am the real.</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex07(overflow hidden)</h1>
+    <div class="container7">
+      <div class="child7">I am the real.</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex08(overflow scroll)</h1>
+    <div class="container8">
+      <div class="child8">I am the content.</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex09(overflow auto)</h1>
+    <div class="container9">
+      <div class="child9">I am the real.</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex10(CSS Opacity)</h1>
+    <div class="container">
+      <div class="child">I'm a old element</div>
+    </div>
+    <div class="container opacity">
+      <div class="child">I'm a old element</div>
+    </div>
+    <div class="container transparent">
+      <div class="child">I'm a old element</div>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex11(text-shadow)</h1>
+    <p id="p11">My name is Tofayel.</p>
+
+    <h1 style="background-color: yellowgreen">Ex12(box-shadow)</h1>
+    <div>My name is Tofayel.</div>
+
+    <h1 style="background-color: yellowgreen">Ex13(Fixed Columns)</h1>
+    <div class="newspaper">
+      Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+      euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+      enim ad minim veniam, quis facilisis at vero eros et accumsan et iusto
+      odio dignissim qui blandit praesent luptatum zzril delenit augue duis
+      dolore te feugait nulla facilisi.
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex14(Responsive Columns)</h1>
+    <div class="latter">
+      Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+      euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+      enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+      lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+      iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+      illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+      odio dignissim qui blandit praesent luptatum zzril delenit augue duis
+      dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis
+      eleifend option congue nihil imperdiet doming id quod mazim placerat facer
+      possim assum.
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex15(Column Span)</h1>
+    <div class="latter15">
+      <h1 id="h15">Dolor Sit Amet</h1>
+      <p>
+        Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+        enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+        lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+        iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+        vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+        iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+        duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis
+        eleifend option congue nihil imperdiet doming id quod mazim placerat
+        facer possim assum.
+      </p>
+    </div>
+
+    <h1 style="background-color: yellowgreen">Ex16(CSS Tables)</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tofayel</td>
+          <td>Ahmed</td>
+        </tr>
+        <tr>
+          <td>Asif</td>
+          <td>Akbar</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1 style="background-color: yellowgreen">Ex17(Table Sizing)</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tofayel</td>
+          <td>Ahmed</td>
+        </tr>
+        <tr>
+          <td>Asif</td>
+          <td>Akbar</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1 style="background-color: yellowgreen">
+      Ex18(Text Alignment in Table Cells)
+    </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tofayel</td>
+          <td>Ahmed</td>
+        </tr>
+        <tr>
+          <td>Asif</td>
+          <td>Akbar</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1 style="background-color: yellowgreen">Ex19(List Item Markers)</h1>
+    <div class="col">
+        <p>Unordered lists:</p>
+        <ul>
+          <li>Number 1</li>
+          <li>Number 2</li>
+          <li>Number 3</li>
+        </ul>
+        <ul class="circle">
+          <li>Number 1</li>
+          <li>Number 2</li>
+          <li>Number 3</li>
+        </ul>
+        <ul class="square">
+          <li>Number 1</li>
+          <li>Number 2</li>
+          <li>Number 3</li>
+        </ul>
+      </div>
+      <div class="col">
+        <p>Ordered lists:</p>
+        <ol>
+          <li>Number 1</li>
+          <li>Number 2</li>
+          <li>Number 3</li>
+        </ol>
+        <ol class="upper-roman">
+          <li>Number 1</li>
+          <li>Number 2</li>
+          <li>Number 3</li>
+        </ol>
+        <ol class="lower-alpha">
+          <li>Number 1</li>
+          <li>Number 2</li>
+          <li>Number 3</li>
+        </ol>
+      </div>
+    </body>
+
+    <h1 style="background-color: yellowgreen">Ex20(Position the List Item Markers</h1>
+    <ul>
+        <li>Number 1</li>
+        <li>Number 2</li>
+        <li>Number 3</li>
+      </ul>
+
+    <h1 style="background-color: yellowgreen">Ex21(Moves an Element)</h1>
+    <div>First latter</div>
+    <div class="test21">Second latter</div>
+    <div>Third latter</div>
+
+    <h1 style="background-color: yellowgreen">Ex22(Scales an Element)</h1>
+    <div>First latter</div>
+    <div class="test22">Second latter</div>
+
+    <h1 style="background-color: yellowgreen">Ex23(Rotates an Element)</h1>
+    <div>First latter</div>
+    <div class="div2">Second latter</div>
+    <div class="div3">Third latter</div>
+
+    <h1 style="background-color: yellowgreen">Ex24(Skews an Element)</h1>
+    <div>A latter</div>
+    <div class="test24">1st latter</div>
+    <div class="test34">2nd latter</div>
+    <div class="test44">3rd latter</div>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>

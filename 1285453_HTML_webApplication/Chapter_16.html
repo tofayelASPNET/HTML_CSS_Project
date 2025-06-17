@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_16</title>
+    <link rel="stylesheet" href="style16.css" />
+    <link rel="stylesheet" href="project.css">
+    <style>
+      #p1 {
+        color: rgba(34, 255, 0, 0.779);
+      }
+      p {
+        text-decoration-line: underline;
+      }
+      .p1 {
+        text-decoration-style: double;
+      }
+      .p2 {
+        text-decoration-style: dotted;
+      }
+      .p3 {
+        text-decoration-style: dashed;
+      }
+      .p4 {
+        text-decoration-style: wavy;
+      }
+      #p2 {
+        text-transform: capitalize;
+      }
+      #p3 {
+        white-space: pre-wrap;
+      }
+      .test-clip1 {
+        white-space: nowrap;
+        width: 250px;
+        border: 1px solid #5fe218d8;
+        overflow: hidden;
+        text-overflow: clip;
+      }
+      .test-ellipsis1 {
+        white-space: nowrap;
+        width: 250px;
+        border: 1px solid #e81111d9;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .test-word-wrap {
+        width: 250px;
+        border: 1px solid #ecb215d2;
+        word-wrap: break-word;
+      }
+      p[class] {
+        width: 150px;
+        border: 1px solid #e80e0ec7;
+      }
+      .test-keep-all {
+        word-break: keep-all;
+      }
+
+      .test-break-word {
+        word-break: break-word;
+      }
+      .test-break-all {
+        word-break: break-all;
+      }
+      .test-one1 {
+        letter-spacing: -1px;
+      }
+      .test-two1 {
+        letter-spacing: 2px;
+      }
+      .test-one2 {
+        word-spacing: -6px;
+      }
+      .test-two2 {
+        word-spacing: 6px;
+      }
+      #p11 {
+        border: 1px solid rgba(59, 217, 15, 0.724);
+        font-size: 25px;
+      }
+      .test-one3 {
+        line-height: 90%; /* 20px * 80% = 16px */
+      }
+      .test-two3 {
+        line-height: 2.5; /* 20px * 2.3 = 46px */
+      }
+      #p12 {
+        width: 200px;
+        border: 1px solid rgba(224, 15, 15, 0.813);
+      }
+      .test-one4 {
+        text-align: justify;
+      }
+      .test-two4 {
+        text-align: center;
+      }
+      .test-three4 {
+        text-align: right;
+      }
+      #p13 {
+        width: 200px;
+        border: 1px solid rgba(222, 13, 13, 0.795);
+      }
+      .test13 {
+        text-indent: 25px;
+      }
+      #p14 {
+        font-family: "Times New Roman", Times, serif;
+      }
+      html {
+        /* font-size: 10px; */
+        font-size: 63.5%;
+      }
+      #p15 {
+        font-size: 3rem;
+      }
+      #p16 {
+        font-weight: bold;
+      }
+      #p17 {
+        font-style: italic;
+      }
+      #p18 {
+        font-variant: small-caps;
+      }
+      @font-face {
+        font-family: "Times New Roman";
+        src: url(DynaPuff-Regular.ttf);
+      }
+      #p19 {
+        font-family: "Times New Roman";
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_16</h1></p>
+    <h1 style="background-color: yellowgreen">Ex01(Text Rendering)</h1>
+    <p id="p1">This is a latter</p>
+
+    <h1 style="background-color: yellowgreen">Ex02(Text Decoration)</h1>
+    <p class="p1">This is the 1st latter.</p>
+
+    <p class="p2">This is the 2nd latter.</p>
+    <p class="p3">This is the 3rd latter.</p>
+    <p class="p4">This is the 4th latter.</p>
+    <p>This is the 5th latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex03(Text Transform)</h1>
+    <p id="p2">This is a latter</p>
+
+    <h1 style="background-color: yellowgreen">Ex04(Handling Whitespaces)</h1>
+    <h1>This is writting</h1>
+    <p id="p3">
+      This is some text. This is some text. This is some text. This is some
+      text. This is some text. This is some text. This is some text. This is
+      some text. This is some text. This is some text. This is some text. This
+      is some text.
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex05(Text Overflow)</h1>
+    <p class="test-clip1">text-overflow: clip - This is some text</p>
+    <p class="test-ellipsis1">text-overflow: ellipsis - This is some text</p>
+
+    <h1 style="background-color: yellowgreen">Ex06(Word Wrap)</h1>
+    <p class="test-word-wrap">
+      Latter contains a very long word: thisisaveryveryveryveryveryverylongword.
+      The long word will break and wrap to the next line.
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex07(Word Break)</h1>
+    <p>Testing "word-break: keep-all"</p>
+    <p class="test-keep-all">
+      This is a-very-long-hyphen word, and this is averyveryveryveryveryverylong
+      word.
+    </p>
+    <p>Testing "word-break: break-word"</p>
+    <p class="test-break-word">
+      This is a-very-long-hyphen word, and this is averyveryveryveryveryverylong
+      word.
+    </p>
+    <p>Testing "word-break: break-all"</p>
+    <p class="test-break-all">
+      This is a-very-long-hyphen word, and this is averyveryveryveryveryverylong
+      word.
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex08(Text Spacing)</h1>
+    <p>This latter is for testing.</p>
+    <p class="test-one">This latter is for testing.</p>
+    <p class="test-two">This latter is for testing.</p>
+
+    <h1 style="background-color: yellowgreen">Ex09(Letter Spacing)</h1>
+    <p>This latter is for testing.</p>
+    <p class="test-one1">This latter is for testing.</p>
+    <p class="test-two1">This latter is for testing.</p>
+
+    <h1 style="background-color: yellowgreen">Ex10(Word Spacing)</h1>
+    <p>This latter is for testing.</p>
+    <p class="test-one2">This latter is for testing.</p>
+    <p class="test-two2">This latter is for testing.</p>
+
+    <h1 style="background-color: yellowgreen">Ex11(Line Height)</h1>
+    <p id="p11">This latter is for testing.</p>
+    <p class="test-one3">This latter is for testing.</p>
+    <p class="test-two3">This latter is for testing.</p>
+
+    <h1 style="background-color: yellowgreen">Ex12(Text Align)</h1>
+    <p id="p12">
+      This latter is for testing. This latter is for testing. This latter is for
+      testing.
+    </p>
+    <p class="test-one4">
+      This latter is for testing. This latter is for testing. This latter is for
+      testing.
+    </p>
+    <p class="test-two4">
+      This latter is for testing. This latter is for testing. This latter is for
+      testing.
+    </p>
+    <p class="test-three4">
+      This latter is for testing. This latter is for testing. This latter is for
+      testing.
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex13(Text Indent)</h1>
+    <p id="p13">
+      This latter is for testing. This latter is for testing. This latter is for
+      testing.
+    </p>
+    <p class="test13">
+      This latter is for testing. This latter is for testing. This latter is for
+      testing.
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex14(CSS Fonts)</h1>
+    <p id="p14">This latter Is for Testing.</p>
+
+    <h1 style="background-color: yellowgreen">Ex15(Font Size)</h1>
+    <p id="p15">This latter Is for writting.</p>
+
+    <h1 style="background-color: yellowgreen">Ex16(Font Weight)</h1>
+    <p id="p16">This latter Is for writting.</p>
+
+    <h1 style="background-color: yellowgreen">Ex17(Font Style)</h1>
+    <p id="p17">This latter Is for writting.</p>
+
+    <h1 style="background-color: yellowgreen">Ex18(Font Variant)</h1>
+    <p id="p18">This latter Is for writting.</p>
+
+    <h1 style="background-color: yellowgreen">Ex19(The @font-face)</h1>
+    <p id="p19">This latter Is for writting.</p>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>

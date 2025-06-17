@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter_17</title>
+    <link rel="stylesheet" href="style17.css" />
+    <link rel="stylesheet" href="project.css">
+    <style>
+      #p2 {
+        background-color: rgba(255, 255, 0, 0.491);
+      }
+      #p3 {
+        color: rgba(255, 0, 0, 0.527);
+        border: 1px solid rgba(29, 91, 215, 0.831);
+        width: 300px;
+        height: 300px;
+        background-image: url("/download (4).jpg");
+      }
+      #p4 {
+        color: rgba(255, 0, 0, 0.66);
+        border: 1px solid rgba(0, 255, 13, 0.84);
+        width: 300px;
+        height: 300px;
+        background-image: url("/download\ \(4\).jpg");
+        background-repeat: repeat-x;
+      }
+      #p5 {
+        color: rgba(255, 0, 0, 0.833);
+        border: 1px solid rgba(81, 255, 0, 0.826);
+        width: 280px;
+        height: 160px;
+        background-image: url("/download\ \(4\).jpg");
+        background-repeat: no-repeat;
+        background-position: right top;
+      }
+      #p6 {
+        color: rgba(255, 0, 0, 0.806);
+        border: 1px solid rgba(30, 255, 0, 0.763);
+        width: 310px;
+        height: 160px;
+        background-image: url("/download\ \(4\).jpg");
+        background-repeat: no-repeat;
+        background-size: 110px 110px;
+      }
+      .bg {
+        border: 10px dotted rgba(15, 42, 218, 0.842);
+        padding: 15px;
+        background: rgba(219, 134, 15, 0.664);
+      }
+      .padding {
+        background-clip: padding-box;
+      }
+      .content {
+        background-clip: content-box;
+      }
+      .bg1 {
+        width: 320px;
+        height: 110px;
+
+        color: rgba(0, 255, 76, 0.845);
+        border: 10px solid rgba(255, 0, 0, 0.384);
+        padding: 35px;
+        background-image: url("/download\ \(4\).jpg");
+        background-repeat: no-repeat;
+      }
+      .border-box {
+        background-origin: border-box;
+      }
+      .content-box {
+        background-origin: content-box;
+      }
+      body {
+        margin: 0;
+      }
+      header {
+        height: 60px;
+      }
+      .fixed {
+        background-position: center 65px;
+        height: 550px;
+        background-image: url("/download\ \(4\).jpg");
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+      }
+      footer {
+        height: 1000px;
+        background-color: rgba(144, 238, 144, 0.779);
+      }
+      #p11 {
+        height: 100px;
+        background: linear-gradient(
+          rgba(255, 0, 0, 0.612),
+          rgba(255, 255, 0, 0.509)
+        );
+      }
+      #p12 {
+        height: 120px;
+        background: repeating-linear-gradient(
+          rgba(255, 0, 0, 0.63),
+          rgba(255, 255, 0, 0.459) 30%,
+          rgba(0, 128, 0, 0.795) 50%
+        );
+      }
+      #p13 {
+        height: 150px;
+        background: radial-gradient(
+          rgba(255, 0, 0, 0.626),
+          rgba(255, 255, 0, 0.623),
+          rgba(0, 128, 0, 0.861)
+        );
+      }
+      #p14 {
+        height: 150px;
+        background: repeating-radial-gradient(
+          rgba(255, 0, 0, 0.712),
+          rgba(255, 255, 0, 0.409) 10%,
+          rgba(2, 0, 128, 0.84) 20%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="brand">Project Lesson</span>
+      <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Chapter_01.html">Ch-1</a></li>
+          <li><a href="Chapter_02.html">Ch-2</a></li>
+          <li><a href="Chapter_03.html">Ch-3</a></li>
+          <li><a href="Chapter_04.html">Ch-4</a></li>
+          <li><a href="Chapter_05.html">Ch-5</a></li>
+          <li><a href="Chapter_06.html">Ch-6</a></li>
+          <li><a href="Chapter_07.html">Ch-7</a></li>
+          <li><a href="Chapter_08.html">Ch-8</a></li>
+          <li><a href="Chapter_11.html">Ch-11</a></li>
+          <li><a href="Chapter_12.html">Ch-12</a></li>
+          <li><a href="Chapter_13.html">Ch-13</a></li>
+          <li><a href="Chapter_14.html">Ch-14</a></li>
+          <li><a href="Chapter_15.html">Ch-15</a></li>
+          <li><a href="Chapter_16.html">Ch-16</a></li>
+          <li><a href="Chapter_17.html">Ch-17</a></li>
+          <li><a href="Chapter_18.html">Ch-18</a></li>
+          <li><a href="Chapter_19.html">Ch-19</a></li>
+          <li><a href="Chapter_20.html">Ch-20</a></li>
+          <li><a href="Chapter_21.html">Ch-21</a></li>
+          <li><a href="Chapter_22.html">Ch-22</a></li>
+      </ul>
+  </nav>
+  <p><h1 style="text-align: center; padding: 15PX; background-color: rgb(125, 143, 247); color: white;">Chapter_17</h1></p>
+    <h1 style="background-color: yellowgreen">
+      Ex01(CSS Background Properties)
+    </h1>
+    <p id="p1">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex02(background-color)</h1>
+    <p id="p2">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex03(background-image)</h1>
+    <p id="p3">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex04(background-repeat)</h1>
+    <p id="p4">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex05(background-position)</h1>
+    <p id="p5">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex06(background-size)</h1>
+    <p id="p6">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex07(background-clip)</h1>
+    <p>No background-clip (border-box is default):</p>
+    <p class="bg">This is a latter.</p>
+    <p>background-clip: padding-box:</p>
+    <p class="bg padding">This is a latter.</p>
+    <p>background-clip: content-box:</p>
+
+    <p class="bg content">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex08(background-origin)</h1>
+    <p>No background-origin (padding-box is default):</p>
+    <p class="bg1">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+      nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </p>
+    <p>background-origin: border-box:</p>
+    <p class="bg border-box">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+      nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </p>
+    <p>background-origin: content-box:</p>
+    <p class="bg content-box">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+      nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </p>
+
+    <h1 style="background-color: yellowgreen">Ex09(background-attachment)</h1>
+    <header>This is a header with height of 65px.</header>
+    <div class="fixed"></div>
+    <footer></footer>
+
+    <h1 style="background-color: yellowgreen">
+      Ex10(CSS Gradient Backgrounds)
+    </h1>
+    <p id="p10">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex11(Linear Gradients)</h1>
+    <p id="p11">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex12(Repeating Linear Gradients)
+    </h1>
+    <p id="p12">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex13(Radial Gradients)</h1>
+    <p id="p13">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">
+      Ex14(Repeating Radial Gradients)
+    </h1>
+    <p id="p14">This is a latter.</p>
+
+    <h1 style="background-color: yellowgreen">Ex15(index)</h1>
+
+    <h1 style="background-color: yellowgreen">Ex07(Word Break)</h1>
+    <div class="sprite testing number"></div>
+    <div class="sprite number-1"></div>
+    <div class="sprite number-2"></div>
+    <div class="sprite number-3"></div>
+    <div class="sprite number-4"></div>
+    <div class="sprite number-5"></div>
+    <div class="sprite number-6"></div>
+    <div class="sprite number-7"></div>
+    <div class="sprite number-8"></div>
+    <div class="sprite number-9"></div>
+    <div id="backDiv">
+      <a href="home.html">Back to home</a>
+    </div>
+  </body>
+</html>
